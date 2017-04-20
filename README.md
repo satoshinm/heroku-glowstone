@@ -19,19 +19,23 @@ Since Heroku is a bit of a weird platform, there are a couple of caveats to runn
 2. Create a new Heroku app with a custom buildpack.
 
    ```bash
-   $ heroku create my-app-name --buildpack https://github.com/ddollar/heroku-buildpack-multi.git
+   heroku create my-app-name
+   heroku buildpacks:add  heroku/ruby
+   heroku buildpacks:add heroku/python
+   heroku buildpacks:add heroku/java
+   heroku buildpacks:add heroku/nodejs
    ```
 
 3. Add your Amazon AWS credentials and S3 bucket name to the Heroku configuration. This enables data persistence. Otherwise, your server will be wiped each time it is restarted.
 
    ```bash
-   $ heroku config:add AWS_KEY=xxxxxxx AWS_SECRET=yyyyyyyyyyyyyyyyy S3_BUCKET=my-bucket-name
+   heroku config:add AWS_KEY=xxxxxxx AWS_SECRET=yyyyyyyyyyyyyyyyy S3_BUCKET=my-bucket-name
    ```
 
 4. Push the app to Heroku.
 
    ```bash
-   $ git push heroku master
+   git push heroku master
    ```
 
 ## Client Setup
@@ -39,7 +43,7 @@ Since Heroku is a bit of a weird platform, there are a couple of caveats to runn
 Install https://github.com/leonardosantos/hmwtc, then:
 
    ```bash
-   $ hmwtc my-app-name.herokuapp.com
+   hmwtc my-app-name.herokuapp.com
    ```
 
 ## Credits
