@@ -3,9 +3,9 @@ http = require("http")
 net = require("net")
 urlParse = require("url").parse
 
-webserver_port = process.env.MC_HEROKU_SERVER_PORT || 8080
-minecraft_server_host = "0.0.0.0"
-minecraft_server_port = 25566
+webserver_port = process.env.GS_HEROKU_SERVER_PORT || 8080
+glowstone_server_host = "0.0.0.0"
+glowstone_server_port = 25566
 
 httpServer = http.createServer (request, response) ->
   console.log "Received request for #{request.url}"
@@ -34,7 +34,7 @@ webSocketServer.on "request", (request) ->
 
   console.log(
     "Trying to create a TCP to WebSocket tunnel for " +
-    "#{minecraft_server_host}:#{minecraft_server_port}"
+    "#{glowstone_server_host}:#{glowstone_server_port}"
   )
 
   webSocketConnection = request.accept()
@@ -57,7 +57,7 @@ webSocketServer.on "request", (request) ->
   tcpSocketConnection.on "close", ->
     webSocketConnection.close()
 
-  tcpSocketConnection.connect minecraft_server_port, minecraft_server_host, ->
+  tcpSocketConnection.connect glowstone_server_port, glowstone_server_host, ->
     webSocketConnection.on "message", (msg) ->
       if msg.type is "utf8"
         console.log "received utf message: #{msg.utf8Data}"

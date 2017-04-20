@@ -1,11 +1,15 @@
 class Sync
-  WORLD = ["world"]
+  WORLD = ["worlds"]
   ADMIN = [
-    "server.properties",
-    "banned-ips.txt",
-    "banned-players.txt",
-    "ops.txt",
-    "white-list.txt"
+    "config/banned-ips.json",
+    "config/banned-players.json",
+    "config/commands.yml",
+    "config/glowstone.yml",
+    "config/help.yml",
+    "config/ops.json",
+    "config/permissions.yml",
+    "config/whitelist.yml",
+    "config/world.yml"
   ]
 
   def self.initial_sync

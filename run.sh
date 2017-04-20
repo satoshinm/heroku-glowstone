@@ -1,3 +1,3 @@
 #!/bin/bash
 
-coffee proxy/connect.coffee frost-minecraft-server.herokuapp.com
+coffee proxy/connect.coffee frost-glowstone-server.herokuapp.com

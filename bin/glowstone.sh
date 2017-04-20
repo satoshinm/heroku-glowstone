@@ -10,5 +10,5 @@ ruby bin/sync.rb init
 touch server.log
 nice tail -f server.log &
 
-# Run minecraft
-java -Xmx1024M -Xms1024M -jar vendor/minecraft_server.jar nogui
+# Run glowstone
+java -Xmx1024M -Xms1024M -jar vendor/glowstone.jar
