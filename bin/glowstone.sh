@@ -6,6 +6,12 @@ echo "server:" > /app/config/glowstone.yml
 echo "    port: 25566" >> /app/config/glowstone.yml
 echo "    online-mode: false" >> /app/config/glowstone.yml
 
+# Install plugins
+mkdir -p /app/plugins
+cp vendor/plugins/* /app/plugins
+echo Installed plugins:
+ls -l vendor/plugins/
+
 # Sync initial files
 ruby bin/sync.rb init
 
