@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Create server config
-echo "server-port=25566" > /app/server.properties
+mkdir -p /app/config
+echo "server:" > /app/config/glowstone.yml
+echo "    port: 25566" >> /app/config/glowstone.yml
+echo "    online-mode: false" >> /app/config/glowstone.yml
 
 # Sync initial files
 ruby bin/sync.rb init
