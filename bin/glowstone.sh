@@ -31,4 +31,4 @@ touch server.log
 nice tail -f server.log &
 
 # Run glowstone
-java -Xmx1024M -Xms1024M -jar vendor/glowstone.jar
+java -Xmx512M -Xms512M -jar vendor/glowstone.jar
