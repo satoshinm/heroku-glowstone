@@ -12,6 +12,11 @@ cp vendor/plugins/* /app/plugins
 echo Installed plugins:
 ls -l vendor/plugins/
 
+mkdir -p /app/plugins/WebSandboxMC
+echo " http:" > /app/plugins/WebSandboxMC/config.yml
+echo "  port: $GS_HEROKU_SERVER_PORT" >> /app/plugins/WebSandboxMC/config.yml
+
+
 # Sync initial files
 ruby bin/sync.rb init
 
