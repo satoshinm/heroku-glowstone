@@ -22,9 +22,9 @@ mkdir -p /app/plugins/WebSandboxMC
 echo "http:" > /app/plugins/WebSandboxMC/config.yml
 echo "  port: $GS_HEROKU_SERVER_PORT" >> /app/plugins/WebSandboxMC/config.yml
 echo "mc:" >> /app/plugins/WebSandboxMC/config.yml
-echo "  x_center: -86" >> /app/plugins/WebSandboxMC/config.yml
-echo "  y_center: 72" >> /app/plugins/WebSandboxMC/config.yml
-echo "  z_center: -191" >> /app/plugins/WebSandboxMC/config.yml
+echo "  x_center: 46" >> /app/plugins/WebSandboxMC/config.yml
+echo "  y_center: 69" >> /app/plugins/WebSandboxMC/config.yml
+echo "  z_center: 183" >> /app/plugins/WebSandboxMC/config.yml
 
 
 # Sync initial files
