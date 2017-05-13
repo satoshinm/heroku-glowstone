@@ -23,7 +23,7 @@ echo "http:" > /app/plugins/WebSandboxMC/config.yml
 echo "  port: $GS_HEROKU_SERVER_PORT" >> /app/plugins/WebSandboxMC/config.yml
 echo "mc:" >> /app/plugins/WebSandboxMC/config.yml
 echo "  x_center: 46" >> /app/plugins/WebSandboxMC/config.yml
-echo "  y_center: 69" >> /app/plugins/WebSandboxMC/config.yml
+echo "  y_center: 75" >> /app/plugins/WebSandboxMC/config.yml
 echo "  z_center: 183" >> /app/plugins/WebSandboxMC/config.yml
 
 
